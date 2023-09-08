@@ -28,6 +28,27 @@
    <p>Therefore, the difference of the two of those numbers is: <span id= "answera">(placeholder for the answer)</span></p>
     <input type="button" id="diffButton" value="Click to subtract!">
   
-    <script src="./script/app.js"></script>
+    <script> 
+    function displayProd() {
+  let firstNum = Number(document.getElementById('firstNum').innerHTML)
+  let secondNum = Number(document.getElementById('secondNum').innerHTML)
+
+  let total = firstNum * secondNum;
+  document.getElementById("answer").innerHTML = ` ${firstNum} * ${secondNum}, equals to ${total}` ;
+}
+
+document.getElementById('prodButton').addEventListener("click", displayProd);
+
+
+function displayDiff() {
+  let firstNum = Number(document.getElementById('firstNum').innerHTML)
+  let secondNum = Number(document.getElementById('secondNum').innerHTML)
+
+  let total = firstNum - secondNum;
+  document.getElementById("answera").innerHTML = ` ${firstNum} - ${secondNum}, equals to ${total}` ;
+}
+
+document.getElementById('diffButton').addEventListener("click", displayDiff);
+    </script>
 </body>
 </html>
